@@ -1,32 +1,42 @@
 import React from "react";
-import styles from './BlogPage.module.css';  // Import CSS module
+import styles from "./BlogPage.module.css"; // Import CSS module
+import { useNavigate } from "react-router-dom";
 
 const BlogPage = () => {
+  const navigate = useNavigate();
   const blogs = [
     {
       id: 1,
       title: "Understanding Constitutional Rights",
-      content: "The Indian Constitution grants citizens fundamental rights such as equality, freedom, and protection against exploitation. It’s crucial to understand how these rights impact everyday life."
+      content:
+        "The Indian Constitution grants citizens fundamental rights such as equality, freedom, and protection against exploitation. It’s crucial to understand how these rights impact everyday life.",
     },
     {
       id: 2,
       title: "Recent Amendments and Their Impacts",
-      content: "Recent constitutional amendments have changed the landscape of various rights. This blog discusses some of the key amendments and their potential impact."
+      content:
+        "Recent constitutional amendments have changed the landscape of various rights. This blog discusses some of the key amendments and their potential impact.",
     },
     {
       id: 3,
       title: "Common Constitutional Violations",
-      content: "Learn about some of the most common ways the Constitution is violated, often unknowingly, and the punishments associated with such violations."
-    }
+      content:
+        "Learn about some of the most common ways the Constitution is violated, often unknowingly, and the punishments associated with such violations.",
+    },
   ];
-
+  const handleGoHome = () => {
+    navigate("/");
+  };
   return (
     <div className={styles.blogContainer}>
       {/* Button to create a new blog at the top */}
       <div className={styles.buttonContainer}>
         <button className={styles.createBlogButton}>Create New Blog</button>
+        <button className={styles.goHomeButton} onClick={handleGoHome}>
+          Home
+        </button>
       </div>
-      
+
       <h2 className={styles.blogHeading}>Blog Articles</h2>
       <div className={styles.blogList}>
         {blogs.map((blog) => (

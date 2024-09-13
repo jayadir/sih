@@ -52,19 +52,22 @@
     justify-content: flex-end;
     margin-bottom: 40px;
   }
-  
-  .createBlogButton {
+  .createBlogButton, .goHomeButton {
     background-color: #007bff;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Slightly increased padding for better spacing */
     font-size: 1.2rem;
+    font-weight: bold; /* Make the text bold */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    margin-right: 2px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added transition for transform and box-shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
   }
   
-  .createBlogButton:hover {
+  .createBlogButton:hover, .goHomeButton:hover {
     background-color: #0056b3;
+    transform: translateY(-2px); /* Slightly lift the button on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
   }
-  
