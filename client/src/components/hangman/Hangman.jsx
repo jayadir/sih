@@ -27,13 +27,13 @@ export default function Hangman() {
     const [status, setStatus] = useState('');
 
     const maskWord = currentQuestion?.answer
-        ?.split(' ')
-        .map(word =>
-            word.split('')
-                .map(letter => corrects.includes(letter.toLowerCase()) ? letter : "_")
-                .join(" ")
-        )
-        .join('   ');
+    ?.split('') // Split the answer into individual characters
+    .map(letter => 
+        letter === ' ' 
+        ? '\xa0\xa0\xa0' // Add two non-breaking spaces between words
+        : (corrects.includes(letter.toLowerCase()) ? letter : "_")
+    )
+    .join(' ');
 
     const onGuess = letter => {
         if (fails.length > 9 || status) return;
