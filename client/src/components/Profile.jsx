@@ -6,7 +6,7 @@ function UserProfile() {
   const [activeTab, setActiveTab] = useState("purchased");
 
   const user = {
-    avatar: "https://i.pravatar.cc/150?img=3", // Online avatar URL
+    avatar: "https://www.pngplay.com/wp-content/uploads/12/User-Avatar-Profile-Transparent-Free-PNG-Clip-Art.png", // Online avatar URL
     name: "Jayadir",
     email: "jayadir@example.com",
     citizenPoints: 1200,
@@ -15,13 +15,13 @@ function UserProfile() {
   const purchasedItems = [
     {
       name: "T-shirt",
-      img: "https://example.com/tshirt.jpg",
-      price: "₹500",
+      img:"/Designer.png",
+      price: "500",
     },
     {
       name: "Notebook",
-      img: "https://example.com/notebook.jpg",
-      price: "₹200",
+      img: "/book.png",
+      price: "200",
     },
   ];
 
@@ -29,12 +29,12 @@ function UserProfile() {
     {
       name: "Coffee Mug",
       img: "https://example.com/mug.jpg",
-      price: "₹300",
+      price: "300",
     },
     {
       name: "Backpack",
       img: "https://example.com/backpack.jpg",
-      price: "₹1000",
+      price: "1000",
     },
   ];
 

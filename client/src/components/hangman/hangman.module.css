@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f7f3f2;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .mask {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .question {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+  }
+  
+  .alphabets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .letterButton {
+    background-color: #eee;
+    color: #333;
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+  
+  .letterButton:hover {
+    background-color: #c8e4f7;
+  }
+  
+  .letterButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .container {
+    position: relative;
+    /* Other styles */
+}
+
+.backButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.backButton:hover {
+    background-color: #0056b3;
+}

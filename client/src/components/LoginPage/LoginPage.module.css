@@ -1,0 +1,75 @@
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+  }
+  
+  .loginBox {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  
+  .loginTitle {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .inputGroup {
+    margin-bottom: 20px;
+  }
+  
+  .inputGroup label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .inputField {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .inputField:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .loginBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .loginBtn:hover {
+    background-color: #0056b3;
+  }
+  
+  .forgotPassword {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .forgotPassword a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .forgotPassword a:hover {
+    text-decoration: underline;
+  }
+  

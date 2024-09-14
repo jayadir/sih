@@ -1,17 +1,22 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import styles from "./Landingpage.module.css";  // Importing the CSS module
-
+import styles from "./Landingpage.module.css"; // Importing the CSS module
+import { Navigate, Link } from "react-router-dom";
 const Landingpage = () => {
   useEffect(() => {
+    // if(!localStorage.getItem("email")) {
+    //   Navigate("/login");
+    // }
     AOS.init({ duration: 1200 });
   }, []);
 
   return (
     <div className={styles.landingPage}>
       {/* Navbar */}
-      <nav className={`navbar navbar-expand-lg navbar-light bg-light ${styles.navbar}`}>
+      <nav
+        className={`navbar navbar-expand-lg navbar-light bg-light ${styles.navbar}`}
+      >
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             Sansthaein Aur Samvidhan
@@ -46,6 +51,11 @@ const Landingpage = () => {
                   Posts
                 </a>
               </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/profile"}>
+                  Profile
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -67,20 +77,30 @@ const Landingpage = () => {
       </section>
 
       {/* Rule Violations Section */}
-      <section id="articles" className={styles.articlesSection} data-aos="fade-right">
-        <div className="container">
+      <section
+        id="articles"
+        className={styles.articlesSection}
+        data-aos="fade-right"
+      >
+        <div className="container" style={{ color: "#ffffff", backgroundColor: "#000000" }}>
           <h2>Rule Violations and Punishments</h2>
           <div className="row">
             <div className="col-md-6">
               <div className={styles.violationCard}>
-                <h4>Violation 1</h4>
-                <p>Person A violated XYZ rule and faced ABC punishment.</p>
+                <h4>Violation of Freedom of speech</h4>
+                <p>
+                  Stand-up comedian was arrested in 2021 for allegedly hurting
+                  religious sentiments
+                </p>
               </div>
             </div>
             <div className="col-md-6">
               <div className={styles.violationCard}>
-                <h4>Violation 2</h4>
-                <p>Person B violated DEF rule and faced PQR punishment.</p>
+                <h4>Contempt of Court (Article 129</h4>
+                <p>
+                  A lawyer, was fined for contempt of court in 2020 after
+                  criticizing the judiciary.
+                </p>
               </div>
             </div>
           </div>
@@ -88,10 +108,21 @@ const Landingpage = () => {
       </section>
 
       {/* Gamified Platform Section */}
-      <section id="posts" className={styles.postsSection} data-aos="fade-left">
-        <div className="container">
-          <h2>Our Resolve for a Gamified Platform</h2>
-          <p>
+      <section
+        id="posts"
+        className={styles.postsSection}
+        data-aos="fade-left"
+        style={{
+          backgroundColor: "#121212", // Dark background
+          color: "#ffffff", // White text color
+          padding: "20px",
+        }}
+      >
+        <div className="container"style={{ color: "#ffffff", backgroundColor: "#000000" }} >
+          <h2 style={{ color: "#ffffff", backgroundColor: "#000000" }}>
+            Our Resolve for a Gamified Platform
+          </h2>
+          <p style={{ color: "#ffffff", backgroundColor: "#000000" }}>
             We are creating a fun and educational platform to help people learn
             about the Constitution through interactive games.
           </p>
@@ -101,14 +132,14 @@ const Landingpage = () => {
       {/* Games Section */}
       <section className={styles.gamesSection} id="games">
         <h2>Games to Learn the Constitution</h2>
-        <div className="container">
+        <div className="container" style={{ color: "#ffffff", backgroundColor: "#000000" }}>
           <div className="row">
-            {/* Game Cards */}
+            {/* Hangman Game Card */}
             <div className="col-md-4">
               <div className={styles.gameCard}>
                 <img
                   className="card-img-top"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Hangman_game.jpg/256px-Hangman_game.jpg"
+                  src="https://m.media-amazon.com/images/I/81xt2+PD0IL.png"
                   alt="Hangman"
                 />
                 <div className="card-body">
@@ -116,45 +147,48 @@ const Landingpage = () => {
                   <p className="card-text">
                     Guess the constitutional terms in this classic game!
                   </p>
-                  <a href="#play-hangman" className="btn btn-primary">
+                  <Link href="" className="btn btn-primary" to={"/hangman"}>
                     Play
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
 
+            {/* Memory Poker Game Card */}
             <div className="col-md-4">
               <div className={styles.gameCard}>
                 <img
                   className="card-img-top"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Space_Invaders_1.gif/480px-Space_Invaders_1.gif"
-                  alt="Shooter Game"
+                  src="/memorypoker.png"
+                  alt="Memory Poker"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Shooter</h5>
+                  <h5 className="card-title">Memory Poker</h5>
                   <p className="card-text">
-                    Shoot your way through questions about the constitution!
+                    Match the correct constitutional facts and win the hand!
                   </p>
-                  <a href="#play-shooter" className="btn btn-primary">
+                  <Link href="" className="btn btn-primary" to={"/hangman"}>
                     Play
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
 
+            {/* Rapid Fire Game Card */}
             <div className="col-md-4">
               <div className={styles.gameCard}>
                 <img
                   className="card-img-top"
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ludo.png/480px-Ludo.png"
-                  alt="Ludo"
+                  src="/rapidfire.png"
+                  alt="Rapid Fire"
                 />
                 <div className="card-body">
-                  <h5 className="card-title">Ludo</h5>
+                  <h5 className="card-title">Rapid Fire</h5>
                   <p className="card-text">
-                    Learn the constitution as you roll your dice!
+                    Answer as many constitutional questions as you can within
+                    the time limit!
                   </p>
-                  <a href="#play-ludo" className="btn btn-primary">
+                  <a href="#play-rapid-fire" className="btn btn-primary">
                     Play
                   </a>
                 </div>
