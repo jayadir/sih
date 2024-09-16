@@ -4,10 +4,15 @@ import SingleCard from './SingleCard';
 
 // Array of articles with article numbers, content, and image URLs
 const cardArticles = [
-  { number: "Article 14", content: "Right to Equality...", src: "/img/article14.png", matched: false },
-  { number: "Article 19", content: "Freedom of Speech...", src: "/img/article19.png", matched: false },
-  // Other articles...
-];
+    { number: "Article 14", content: "Right to Equality: The State shall not deny to any person equality before the law.", src: "/images/article14.png", matched: false },
+    { number: "Article 19", content: "Freedom of Speech and Expression: All citizens shall have the right to freedom of speech.", src: "/images/article19.png", matched: false },
+    { number: "Article 21", content: "Right to Life: No person shall be deprived of his life or personal liberty except according to procedure established by law.", src: "/images/article21.png", matched: false },
+    { number: "Article 32", content: "Right to Constitutional Remedies: The right to move the Supreme Court by appropriate proceedings for the enforcement of rights.", src: "/images/article32.png", matched: false },
+    { number: "Article 44", content: "Uniform Civil Code: The State shall endeavour to secure for the citizens a uniform civil code throughout the territory of India.", src: "/images/article44.png", matched: false },
+    { number: "Article 356", content: "This article allows for the imposition of President’s Rule in a state if its constitutional machinery fails. It plays a critical role in maintaining federal integrity.", src: "/images/article356.png", matched: false }
+  
+  ];
+  
 
 function MemoryGame() {
   const [cards, setCards] = useState([]);

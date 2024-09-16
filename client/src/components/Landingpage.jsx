@@ -37,9 +37,9 @@ const Landingpage = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#articles">
+                <Link className="nav-link" to={"/articles"}>
                   Articles
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#games">
@@ -82,7 +82,10 @@ const Landingpage = () => {
         className={styles.articlesSection}
         data-aos="fade-right"
       >
-        <div className="container" style={{ color: "#ffffff", backgroundColor: "#000000" }}>
+        <div
+          className="container"
+          style={{ color: "#ffffff", backgroundColor: "#000000" }}
+        >
           <h2>Rule Violations and Punishments</h2>
           <div className="row">
             <div className="col-md-6">
@@ -96,7 +99,7 @@ const Landingpage = () => {
             </div>
             <div className="col-md-6">
               <div className={styles.violationCard}>
-                <h4>Contempt of Court (Article 129</h4>
+                <h4>Contempt of Court (Article 129)</h4>
                 <p>
                   A lawyer, was fined for contempt of court in 2020 after
                   criticizing the judiciary.
@@ -118,7 +121,10 @@ const Landingpage = () => {
           padding: "20px",
         }}
       >
-        <div className="container"style={{ color: "#ffffff", backgroundColor: "#000000" }} >
+        <div
+          className="container"
+          style={{ color: "#ffffff", backgroundColor: "#000000" }}
+        >
           <h2 style={{ color: "#ffffff", backgroundColor: "#000000" }}>
             Our Resolve for a Gamified Platform
           </h2>
@@ -132,7 +138,10 @@ const Landingpage = () => {
       {/* Games Section */}
       <section className={styles.gamesSection} id="games">
         <h2>Games to Learn the Constitution</h2>
-        <div className="container" style={{ color: "#ffffff", backgroundColor: "#000000" }}>
+        <div
+          className="container"
+          style={{ color: "#ffffff", backgroundColor: "#000000" }}
+        >
           <div className="row">
             {/* Hangman Game Card */}
             <div className="col-md-4">
@@ -167,7 +176,7 @@ const Landingpage = () => {
                   <p className="card-text">
                     Match the correct constitutional facts and win the hand!
                   </p>
-                  <Link href="" className="btn btn-primary" to={"/hangman"}>
+                  <Link href="" className="btn btn-primary" to={"/memorygame"}>
                     Play
                   </Link>
                 </div>

@@ -69,6 +69,21 @@ export default function Hangman() {
         }
     }, [fails]);
 
+    useEffect(() => {
+        const handleKeydown = (event) => {
+            const letter = event.key.toUpperCase();
+            if (alphabets.includes(letter)) {
+                onGuess(letter);
+            }
+        };
+
+        window.addEventListener('keydown', handleKeydown);
+
+        return () => {
+            window.removeEventListener('keydown', handleKeydown);
+        };
+    }, [alphabets, onGuess]);
+
     return (
         <div className={styles.container}>
             {/* Go Back to Home Button */}

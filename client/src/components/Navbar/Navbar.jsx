@@ -29,9 +29,9 @@ export default function Navbar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#articles">
+                <Link className="nav-link" to={"/articles"}>
                   Articles
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#games">
@@ -39,9 +39,9 @@ export default function Navbar() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#posts">
+                <Link className="nav-link" to={"/blogs"}>
                   Posts
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to={"/profile"}>
