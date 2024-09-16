@@ -1,0 +1,73 @@
+.blogContainer {
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .blogHeading {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #343a40;
+  }
+  
+  .blogList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .blogCard {
+    border: none;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .blogCard:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cardBody {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .cardTitle {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+  
+  .cardText {
+    font-size: 1.1rem;
+    color: #495057;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+  }
+  .createBlogButton, .goHomeButton {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px; /* Slightly increased padding for better spacing */
+    font-size: 1.2rem;
+    font-weight: bold; /* Make the text bold */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 2px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added transition for transform and box-shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added subtle shadow */
+  }
+  
+  .createBlogButton:hover, .goHomeButton:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slightly lift the button on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  }

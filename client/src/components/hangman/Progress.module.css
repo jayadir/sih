@@ -1,0 +1,14 @@
+.hangman svg {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 20px auto;
+  }
+  
+  .line, .circle {
+    stroke: #333;
+    stroke-width: 3;
+    fill: none;
+  }
+  

@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+.container {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container:hover {
+  transform: scale(1.02);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-name:hover {
+  color: #007bff;
+}
+
+.avatar-img {
+  width: 150px;
+  height: 150px;
+  border: 5px solid #007bff;
+  transition: border 0.3s ease, transform 0.3s ease;
+}
+
+.avatar-section:hover .avatar-img {
+  border-color: #6c757d;
+  transform: rotate(5deg) scale(1.1);
+}
+
+.profile-card {
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 30px;
+  transition: box-shadow 0.3s ease;
+}
+
+.profile-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.items-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.item-card {
+  width: 45%;
+  text-align: center;
+  margin: 10px 0;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.item-card:hover {
+  transform: scale(1.05);
+}
+
+.item-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+
+
+
+
+/* landing page */
+/* .landing-page {
+  font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.home-section {
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8); 
+
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.home-content {
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: black; 
+}
+.articles-section,
+.posts-section,
+.games-section {
+  padding: 100px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.violation-card, .game-card {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
 }
+
+.violation-card:hover, .game-card:hover {
+  transform: scale(1.05);
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 8px;
+} */
